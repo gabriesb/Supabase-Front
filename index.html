@@ -11,17 +11,58 @@
     <h2>Add Product</h2>
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" required>
     <label for="price">Price:</label>
     <input type="number" id="price" name="price" required step="0.01">
     <button type="submit">Add</button>
   </form>
 
+  <div class="update-section">
+  <h2>✏️ Update Product</h2>
+  <form id="update-product-form">
+    <input type="hidden" id="update-id">
+
+    <div class="form-group">
+      <label for="update-name">Name:</label>
+      <input type="text" id="update-name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="update-description">Description:</label>
+      <input type="text" id="update-description" required>
+    </div>
+
+    <div class="form-group">
+      <label for="update-price">Price:</label>
+      <input type="number" id="update-price" required step="0.01">
+    </div>
+
+    <div class="form-actions">
+      <button type="submit">Update</button>
+    </div>
+  </form>
+</div>
+
+
+ <div class="search-section">
+  <h2>🔍 Search Product by ID</h2>
+  <div class="search-form">
+    <label for="search-id">Product ID:</label>
+    <input type="number" id="search-id" name="search-id" required>
+    <button id="search-button">Search</button>
+  </div>
+
+  <div id="search-result" class="search-result"></div>
+</div>
+
+<!-- Seção de listagem de todos os produtos -->
+<div class="products-section">
+  <h2>📦 All Products</h2>
   <ul id="products"></ul>
+</div>
+
 
   <script src="app.js"></script>
-  <script>
-    // Call fetchProducts() when the page loads
-    window.addEventListener('load', fetchProducts);
-  </script>
 </body>
 </html>
