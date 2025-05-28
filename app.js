@@ -10,7 +10,7 @@ const searchInput = document.querySelector('#search-id');
 const searchButton = document.querySelector('#search-button');
 const searchResult = document.querySelector('#search-result');
 
-const BASE_URL = 'http://34.229.203.152:3000';
+const BASE_URL = 'http://34.230.78.183:3000';
 
 // === Listar todos os produtos ===
 async function fetchProducts() {
@@ -49,7 +49,6 @@ function appendProductToList(product) {
   productList.appendChild(li);
 }
 
-// === Adicionar produto ===
 addProductForm.addEventListener('submit', async event => {
   event.preventDefault();
   const name = addProductForm.name.value;
